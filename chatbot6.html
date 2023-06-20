@@ -1,68 +1,23 @@
 <html>
 
-<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<a id="liveagent_button_online_5733H0000008Oy4" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('5733H0000008Oy4')"><!-- Online Chat Content --></a><div id="liveagent_button_offline_5733H0000008Oy4" style="display: none;"><!-- Offline Chat Content --></div><script type="text/javascript">
+if (!window._laq) { window._laq = []; }
+window._laq.push(function(){liveagent.showWhenOnline('5733H0000008Oy4', document.getElementById('liveagent_button_online_5733H0000008Oy4'));
+liveagent.showWhenOffline('5733H0000008Oy4', document.getElementById('liveagent_button_offline_5733H0000008Oy4'));
+});</script>
+<script type='text/javascript' src='https://c.la1-c1cs-lo2.salesforceliveagent.com/content/g/js/58.0/deployment.js'></script>
 <script type='text/javascript'>
-	var initESW = function(gslbBaseURL) {
-		embedded_svc.settings.displayHelpButton = true; //Or false
-		embedded_svc.settings.language = 'en-US'; //For example, enter 'en' or 'en-US'
 
-		embedded_svc.settings.defaultMinimizedText = 'Chat with an Expert'; //(Defaults to Chat with an Expert)
-		embedded_svc.settings.disabledMinimizedText = 'Agent Offline'; //(Defaults to Agent Offline)
+liveagent.addButtonEventHandler('5733H0000008Oy4',function (e){
 
-		embedded_svc.settings.loadingText = 'loading'; //(Defaults to Loading)
-		embedded_svc.settings.storageDomain = 'https://htmlpreview.github.io'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+if(e == liveagent.BUTTON_EVENT.BUTTON_AVAILABLE){
 
-		 //Settings for Chat
-		// embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
-			// Returns a valid button ID.
-		//};
-		embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
-		embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-		embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+liveagent.startChatWithWindow('5733H0000008Oy4', window.name);
 
-		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
-		embedded_svc.settings.entryFeature = 'LiveAgent';
-                 <!--BEGIN Button Event Handler-->
+}
 
-//LiveAgent.addButtonEventHandler('5733H0000008Oy4',function (e){
-
-//if(e == LiveAgent.BUTTON_EVENT.BUTTON_AVAILABLE){
-
-//LiveAgent.startChatWithWindow('5733H0000008Oy4', window.name);
-
-//}
-
-//});
-
-<!--END Button Event Handler-->
-
-		embedded_svc.init(
-			'https://ozow--dev02.sandbox.my.salesforce.com',
-			'https://ozow--dev02.sandbox.my.site.com/surveysvforcesite',
-			gslbBaseURL,
-			'00D3H0000000Mbv',
-			'dev2testozowebsite',
-			{
-				baseLiveAgentContentURL: 'https://c.la1-c1cs-lo2.salesforceliveagent.com/content',
-				deploymentId: '5723H0000008OWH',
-				buttonId: '5733H0000008Oy4',
-				baseLiveAgentURL: 'https://d.la1-c1cs-lo2.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'dev2testozowebsite',
-				isOfflineSupportEnabled: true
-			}
-		);
-	};
-
-	if (!window.embedded_svc) {
-		var s = document.createElement('script');
-		s.setAttribute('src', 'https://ozow--dev02.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-		s.onload = function() {
-			initESW(null);
-		};
-		document.body.appendChild(s);
-	} else {
-		initESW('https://service.force.com');
-	}
+});
+liveagent.init('https://d.la1-c1cs-lo2.salesforceliveagent.com/chat', '5723H0000008OWH', '00D3H0000000Mbv');
 </script>
+
 </html>
